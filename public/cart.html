@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mon Panier — Sneakers World</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker-bar">
+  <div class="ticker-inner">
+    <div class="ticker-track">
+      <span>🔥 Livraison offerte dès 80€</span>
+      <span>⚡ Stock limité — commandez vite</span>
+      <span>✅ Paiement 100% sécurisé</span>
+      <span>📦 Expédition sous 24h</span>
+      <span>🎁 Code promo : <strong>WORLD10</strong> — 10% de réduction</span>
+      <span>🔥 Livraison offerte dès 80€</span>
+      <span>⚡ Stock limité — commandez vite</span>
+      <span>✅ Paiement 100% sécurisé</span>
+      <span>📦 Expédition sous 24h</span>
+      <span>🎁 Code promo : <strong>WORLD10</strong> — 10% de réduction</span>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <a href="index.html" class="logo">SNEAKERS<span>WORLD</span></a>
+    <nav class="main-nav">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#meilleures-ventes">Meilleures ventes</a>
+      <a href="index.html#nouveautes">Nouveautés</a>
+      <a href="track.html">Suivre ma commande</a>
+    </nav>
+    <div class="header-actions">
+      <a href="cart.html" class="icon-btn cart-icon" aria-label="Panier">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <button class="drawer-close" id="drawerClose">✕</button>
+  <a href="index.html">Accueil</a>
+  <a href="index.html#meilleures-ventes">Meilleures ventes</a>
+  <a href="cart.html">Mon Panier</a>
+  <a href="track.html">Suivre ma commande</a>
+</div>
+<div class="drawer-overlay" id="drawerOverlay"></div>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="index.html">Accueil</a> <span>/</span> <span>Mon Panier</span>
+</div>
+
+<!-- CART PAGE -->
+<section class="cart-page">
+  <h1 class="cart-title">Mon Panier</h1>
+
+  <!-- EMPTY STATE -->
+  <div class="cart-empty" id="cartEmpty">
+    <div class="empty-icon">🛒</div>
+    <h2>Votre panier est vide</h2>
+    <p>Découvrez nos sneakers et ajoutez vos paires préférées.</p>
+    <a href="index.html" class="btn-primary">Voir la collection</a>
+  </div>
+
+  <!-- CART CONTENT -->
+  <div class="cart-layout" id="cartLayout" style="display:none">
+
+    <div class="cart-items" id="cartItems">
+      <!-- items injected by JS -->
+    </div>
+
+    <div class="cart-summary">
+      <h2>Récapitulatif</h2>
+
+      <div class="summary-row">
+        <span>Sous-total</span>
+        <span id="summarySubtotal">0,00 €</span>
+      </div>
+      <div class="summary-row">
+        <span>Livraison</span>
+        <span id="summaryShipping">Gratuite</span>
+      </div>
+      <div class="promo-row">
+        <input type="text" id="promoInput" placeholder="Code promo"/>
+        <button onclick="applyPromo()">Appliquer</button>
+      </div>
+      <div class="summary-row promo-applied" id="promoRow" style="display:none">
+        <span>Réduction <span id="promoCode"></span></span>
+        <span id="promoDiscount" style="color:#00a651">- 0,00 €</span>
+      </div>
+      <div class="summary-total">
+        <span>Total</span>
+        <span id="summaryTotal">0,00 €</span>
+      </div>
+
+      <button class="btn-checkout" id="checkoutBtn" onclick="checkout()">
+        Procéder au paiement →
+      </button>
+
+      <div class="summary-trust">
+        <span>🔒 Paiement sécurisé via Stripe</span>
+        <span>📦 Livraison offerte dès 80€</span>
+        <span>↩️ Retours sous 30 jours</span>
+      </div>
+
+      <div class="payment-logos" style="justify-content:center;margin-top:16px">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/200px-Visa_Inc._logo.svg.png" alt="Visa"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/200px-Mastercard-logo.svg.png" alt="Mastercard"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/200px-PayPal.svg.png" alt="PayPal"/>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <p class="footer-logo">SNEAKERS<span>WORLD</span></p>
+      <p class="footer-desc">Authenticité garantie, livraison express.</p>
+    </div>
+    <div>
+      <p class="footer-heading">Liens</p>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="track.html">Suivi commande</a></li>
+        <li><a href="#">CGV</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading">Contact</p>
+      <ul><li><a href="mailto:contact@sneakersworld.fr">contact@sneakersworld.fr</a></li></ul>
+    </div>
+    <div></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="payment-logos">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/200px-Visa_Inc._logo.svg.png" alt="Visa"/>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/200px-Mastercard-logo.svg.png" alt="Mastercard"/>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/200px-PayPal.svg.png" alt="PayPal"/>
+    </div>
+    <p>© 2025 Sneakers World. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+<script>
+// Stripe links map (replace with real links)
+const stripeLinks = {
+  1: 'STRIPE_LINK_PRODUIT_1',
+  2: 'STRIPE_LINK_PRODUIT_2',
+  3: 'STRIPE_LINK_PRODUIT_3',
+  4: 'STRIPE_LINK_PRODUIT_4',
+  5: 'STRIPE_LINK_PRODUIT_5',
+  6: 'STRIPE_LINK_PRODUIT_6',
+  7: 'STRIPE_LINK_PRODUIT_7',
+  8: 'STRIPE_LINK_PRODUIT_8',
+};
+
+let promoApplied = false;
+let promoAmount = 0;
+
+function fmt(n) { return n.toFixed(2).replace('.', ',') + ' €'; }
+
+function renderCart() {
+  const cart = getCart();
+  const empty = document.getElementById('cartEmpty');
+  const layout = document.getElementById('cartLayout');
+  const itemsEl = document.getElementById('cartItems');
+
+  if (!cart.length) {
+    empty.style.display = 'block';
+    layout.style.display = 'none';
+    return;
+  }
+
+  empty.style.display = 'none';
+  layout.style.display = 'grid';
+
+  itemsEl.innerHTML = cart.map((item, i) => `
+    <div class="cart-item" data-index="${i}">
+      <a href="product.html?id=${item.id}">
+        <img src="${item.img}" alt="${item.name}"/>
+      </a>
+      <div class="cart-item-info">
+        <p class="cart-item-name">${item.name}</p>
+        ${item.size ? `<p class="cart-item-size">Pointure : ${item.size}</p>` : ''}
+        <p class="cart-item-price">${fmt(item.price)}</p>
+      </div>
+      <div class="cart-item-actions">
+        <div class="qty-control">
+          <button onclick="changeQty(${i}, -1)">−</button>
+          <span>${item.qty}</span>
+          <button onclick="changeQty(${i}, 1)">+</button>
+        </div>
+        <p class="cart-item-total">${fmt(item.price * item.qty)}</p>
+        <button class="remove-btn" onclick="removeItem(${i})">Supprimer</button>
+      </div>
+    </div>
+  `).join('');
+
+  updateSummary();
+}
+
+function updateSummary() {
+  const cart = getCart();
+  const subtotal = cart.reduce((s, i) => s + i.price * i.qty, 0);
+  const shipping = subtotal >= 80 ? 0 : 4.99;
+  const discount = promoApplied ? promoAmount : 0;
+  const total = Math.max(0, subtotal - discount + shipping);
+
+  document.getElementById('summarySubtotal').textContent = fmt(subtotal);
+  document.getElementById('summaryShipping').textContent = shipping === 0 ? 'Gratuite 🎉' : fmt(shipping);
+  document.getElementById('summaryTotal').textContent = fmt(total);
+
+  if (promoApplied) {
+    document.getElementById('promoRow').style.display = 'flex';
+    document.getElementById('promoDiscount').textContent = '- ' + fmt(discount);
+  }
+}
+
+function changeQty(index, delta) {
+  const cart = getCart();
+  cart[index].qty = Math.max(1, cart[index].qty + delta);
+  saveCart(cart);
+  renderCart();
+  updateCartBadge();
+}
+
+function removeItem(index) {
+  const cart = getCart();
+  cart.splice(index, 1);
+  saveCart(cart);
+  renderCart();
+  updateCartBadge();
+  showToast('🗑️ Article retiré du panier.');
+}
+
+function applyPromo() {
+  const code = document.getElementById('promoInput').value.trim().toUpperCase();
+  const cart = getCart();
+  const subtotal = cart.reduce((s, i) => s + i.price * i.qty, 0);
+
+  if (code === 'WORLD10') {
+    promoApplied = true;
+    promoAmount = subtotal * 0.1;
+    document.getElementById('promoCode').textContent = '(WORLD10 -10%)';
+    updateSummary();
+    showToast('✅ Code promo appliqué : -10% !');
+  } else if (code === '') {
+    showToast('⚠️ Entrez un code promo.');
+  } else {
+    showToast('❌ Code promo invalide.');
+  }
+}
+
+function checkout() {
+  const cart = getCart();
+  if (!cart.length) return;
+
+  // If only one product, redirect to its Stripe link
+  if (cart.length === 1) {
+    const link = stripeLinks[cart[0].id];
+    if (!link || link.startsWith('STRIPE_LINK')) {
+      showToast('⚠️ Liens de paiement non configurés. Ajoutez vos liens Stripe.');
+      return;
+    }
+    window.location.href = link;
+    return;
+  }
+
+  // Multiple items — redirect to first Stripe link (customize per your Stripe setup)
+  const firstLink = stripeLinks[cart[0].id];
+  if (!firstLink || firstLink.startsWith('STRIPE_LINK')) {
+    showToast('⚠️ Liens de paiement non configurés. Ajoutez vos liens Stripe.');
+    return;
+  }
+  window.location.href = firstLink;
+}
+
+// Init
+renderCart();
+updateCartBadge();
+</script>
+</body>
+</html>

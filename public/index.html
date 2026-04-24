@@ -1,531 +1,401 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KICKZ — Sneakers Premium</title>
-  <meta name="description" content="Découvrez les meilleures sneakers au meilleur prix. Livraison rapide, paiement sécurisé." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sneakers World — Sneakers Premium</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
-  <!-- ========== TICKER ========== -->
-  <div class="ticker-bar">
-    <div class="ticker-track" id="tickerTrack">
-      <span>🎉 CODE PROMO : <strong>KICKZ10</strong> — 10% sur votre commande</span>
-      <span>🚚 LIVRAISON OFFERTE dès 80€ d'achat</span>
-      <span>🔒 Paiement 100% sécurisé via Stripe</span>
+<!-- TICKER -->
+<div class="ticker-bar">
+  <div class="ticker-inner">
+    <div class="ticker-track">
+      <span>🔥 Livraison offerte dès 80€</span>
+      <span>⚡ Stock limité — commandez vite</span>
+      <span>✅ Paiement 100% sécurisé</span>
       <span>📦 Expédition sous 24h</span>
-      <span>⭐ Plus de 3 000 clients satisfaits</span>
-      <span>🎉 CODE PROMO : <strong>KICKZ10</strong> — 10% sur votre commande</span>
-      <span>🚚 LIVRAISON OFFERTE dès 80€ d'achat</span>
-      <span>🔒 Paiement 100% sécurisé via Stripe</span>
+      <span>🎁 Code promo : <strong>WORLD10</strong> — 10% de réduction</span>
+      <span>🔥 Livraison offerte dès 80€</span>
+      <span>⚡ Stock limité — commandez vite</span>
+      <span>✅ Paiement 100% sécurisé</span>
       <span>📦 Expédition sous 24h</span>
-      <span>⭐ Plus de 3 000 clients satisfaits</span>
+      <span>🎁 Code promo : <strong>WORLD10</strong> — 10% de réduction</span>
     </div>
   </div>
+</div>
 
-  <!-- ========== NAVBAR ========== -->
-  <header class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">KICKZ</a>
-      <nav class="nav-menu">
-        <a href="#accueil">Accueil</a>
-        <a href="#produits">Nos Produits</a>
-        <a href="track.html">Suivre ma commande</a>
-      </nav>
-      <div class="nav-actions">
-        <button class="cart-btn" id="cartBtn" aria-label="Panier">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
-            <line x1="3" y1="6" x2="21" y2="6"/>
-            <path d="M16 10a4 4 0 01-8 0"/>
-          </svg>
-          <span class="cart-count" id="cartCount">0</span>
-        </button>
-        <button class="hamburger" id="hamburger" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#accueil">Accueil</a>
-      <a href="#produits">Nos Produits</a>
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="index.html" class="logo">SNEAKERS<span>WORLD</span></a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#meilleures-ventes">Meilleures ventes</a>
+      <a href="index.html#nouveautes">Nouveautés</a>
       <a href="track.html">Suivre ma commande</a>
-    </div>
-  </header>
-
-  <!-- ========== HERO ========== -->
-  <section class="hero" id="accueil">
-    <div class="hero-content">
-      <span class="hero-badge">Nouvelle Collection 2025</span>
-      <h1>Les Sneakers<br/>qui font le <em>style</em></h1>
-      <p>Les meilleures paires au meilleur prix.<br/>Livraison rapide, paiement sécurisé.</p>
-      <div class="hero-cta">
-        <a href="#produits" class="btn btn-white">Découvrir la collection</a>
-        <a href="#nouveautes" class="btn btn-outline">Nouveautés →</a>
-      </div>
-      <div class="hero-stats">
-        <div><strong>3 000+</strong><span>clients</span></div>
-        <div><strong>4.9/5</strong><span>avis</span></div>
-        <div><strong>24h</strong><span>expédition</span></div>
-      </div>
-    </div>
-    <div class="hero-img-wrap">
-      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=85" alt="Sneaker Nike Air Max" loading="eager" />
-    </div>
-  </section>
-
-  <!-- ========== MEILLEURES VENTES ========== -->
-  <section class="products-section" id="produits">
-    <div class="section-header">
-      <span class="section-tag">Tendances</span>
-      <h2>Meilleures Ventes</h2>
-      <p>Les paires les plus populaires du moment</p>
-    </div>
-    <div class="products-grid">
-
-      <div class="product-card">
-        <div class="product-img-wrap">
-          <span class="badge-discount">-31%</span>
-          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80" alt="Nike Air Max 270" loading="lazy" />
-          <div class="product-overlay">
-            <a href="STRIPE_LINK_PRODUIT_1" class="btn btn-dark" target="_blank" rel="noopener">Acheter maintenant</a>
-          </div>
-        </div>
-        <div class="product-info">
-          <span class="product-brand">Nike</span>
-          <h3>Air Max 270 React</h3>
-          <div class="product-stars">★★★★★ <span>(87)</span></div>
-          <div class="product-prices">
-            <span class="price-old">129,99 €</span>
-            <span class="price-new">89,99 €</span>
-          </div>
-          <a href="STRIPE_LINK_PRODUIT_1" class="btn btn-red btn-full" target="_blank" rel="noopener">Acheter</a>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-img-wrap">
-          <span class="badge-discount">-21%</span>
-          <span class="badge-new">Populaire</span>
-          <img src="https://images.unsplash.com/photo-1556906781-9a412961a28c?w=600&q=80" alt="Jordan 1 Retro High" loading="lazy" />
-          <div class="product-overlay">
-            <a href="STRIPE_LINK_PRODUIT_2" class="btn btn-dark" target="_blank" rel="noopener">Acheter maintenant</a>
-          </div>
-        </div>
-        <div class="product-info">
-          <span class="product-brand">Jordan</span>
-          <h3>Jordan 1 Retro High OG</h3>
-          <div class="product-stars">★★★★★ <span>(214)</span></div>
-          <div class="product-prices">
-            <span class="price-old">189,99 €</span>
-            <span class="price-new">149,99 €</span>
-          </div>
-          <a href="STRIPE_LINK_PRODUIT_2" class="btn btn-red btn-full" target="_blank" rel="noopener">Acheter</a>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-img-wrap">
-          <span class="badge-discount">-37%</span>
-          <img src="https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=600&q=80" alt="Adidas Ultraboost 22" loading="lazy" />
-          <div class="product-overlay">
-            <a href="STRIPE_LINK_PRODUIT_3" class="btn btn-dark" target="_blank" rel="noopener">Acheter maintenant</a>
-          </div>
-        </div>
-        <div class="product-info">
-          <span class="product-brand">Adidas</span>
-          <h3>Ultraboost 22</h3>
-          <div class="product-stars">★★★★☆ <span>(156)</span></div>
-          <div class="product-prices">
-            <span class="price-old">159,99 €</span>
-            <span class="price-new">99,99 €</span>
-          </div>
-          <a href="STRIPE_LINK_PRODUIT_3" class="btn btn-red btn-full" target="_blank" rel="noopener">Acheter</a>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-img-wrap">
-          <span class="badge-discount">-27%</span>
-          <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600&q=80" alt="Nike Dunk Low" loading="lazy" />
-          <div class="product-overlay">
-            <a href="STRIPE_LINK_PRODUIT_4" class="btn btn-dark" target="_blank" rel="noopener">Acheter maintenant</a>
-          </div>
-        </div>
-        <div class="product-info">
-          <span class="product-brand">Nike</span>
-          <h3>Dunk Low Retro</h3>
-          <div class="product-stars">★★★★★ <span>(302)</span></div>
-          <div class="product-prices">
-            <span class="price-old">109,99 €</span>
-            <span class="price-new">79,99 €</span>
-          </div>
-          <a href="STRIPE_LINK_PRODUIT_4" class="btn btn-red btn-full" target="_blank" rel="noopener">Acheter</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ========== CATEGORIES ========== -->
-  <section class="categories-section">
-    <div class="section-header">
-      <span class="section-tag">Explorer</span>
-      <h2>Nos Catégories</h2>
-    </div>
-    <div class="categories-grid">
-      <a href="#produits" class="category-card" style="--bg: url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80')">
-        <div class="cat-overlay"></div>
-        <div class="cat-content"><span>Nike</span><em>58 produits</em></div>
-      </a>
-      <a href="#produits" class="category-card" style="--bg: url('https://images.unsplash.com/photo-1556906781-9a412961a28c?w=600&q=80')">
-        <div class="cat-overlay"></div>
-        <div class="cat-content"><span>Jordan</span><em>34 produits</em></div>
-      </a>
-      <a href="#produits" class="category-card" style="--bg: url('https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=600&q=80')">
-        <div class="cat-overlay"></div>
-        <div class="cat-content"><span>Adidas</span><em>41 produits</em></div>
-      </a>
-      <a href="#produits" class="category-card" style="--bg: url('https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=600&q=80')">
-        <div class="cat-overlay"></div>
-        <div class="cat-content"><span>Yeezy</span><em>19 produits</em></div>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Recherche">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <a href="cart.html" class="icon-btn cart-icon" aria-label="Panier">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
       </a>
     </div>
-  </section>
+  </div>
+  <!-- Search bar -->
+  <div class="search-bar" id="searchBar">
+    <input type="text" placeholder="Rechercher une sneaker..." id="searchInput"/>
+    <button onclick="document.getElementById('searchBar').classList.remove('open')">✕</button>
+  </div>
+</header>
 
-  <!-- ========== SOCIAL PROOF ========== -->
-  <section class="trust-section">
-    <div class="trust-inner">
-      <div class="trust-text">
-        <span class="section-tag section-tag-light">Pourquoi nous choisir</span>
-        <h2>Des milliers de clients<br/>nous font confiance</h2>
-        <p>KICKZ, c'est la garantie de recevoir des sneakers 100% authentiques, au meilleur prix, livrées en un temps record.</p>
-        <a href="#produits" class="btn btn-white">Voir nos produits</a>
+<!-- MOBILE NAV DRAWER -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <button class="drawer-close" id="drawerClose">✕</button>
+  <a href="index.html">Accueil</a>
+  <a href="index.html#meilleures-ventes">Meilleures ventes</a>
+  <a href="index.html#nouveautes">Nouveautés</a>
+  <a href="cart.html">Mon Panier</a>
+  <a href="track.html">Suivre ma commande</a>
+</div>
+<div class="drawer-overlay" id="drawerOverlay"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1607522370275-f6d35f21b12c?w=1600&q=85" alt="Hero sneakers"/>
+  </div>
+  <div class="hero-content">
+    <p class="hero-sub">Nouvelle collection 2025</p>
+    <h1>Les sneakers<br/>qui définissent<br/>votre style</h1>
+    <p class="hero-desc">Authenticité garantie · Livraison express · Prix imbattables</p>
+    <a href="#meilleures-ventes" class="btn-primary">Voir la collection</a>
+  </div>
+</section>
+
+<!-- MEILLEURES VENTES -->
+<section class="products-section" id="meilleures-ventes">
+  <div class="section-title">
+    <h2>Meilleures Ventes</h2>
+    <a href="#" class="see-all">Voir tout →</a>
+  </div>
+  <div class="products-grid">
+
+    <a href="product.html?id=1" class="product-card">
+      <div class="card-img">
+        <span class="badge-sale">-31%</span>
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80" alt="Nike Air Max 270"/>
       </div>
-      <div class="trust-badges">
-        <div class="trust-badge">
-          <div class="trust-icon">🔒</div>
-          <div>
-            <strong>Paiement Sécurisé</strong>
-            <p>Toutes les transactions sont chiffrées et sécurisées via Stripe.</p>
-          </div>
+      <div class="card-body">
+        <p class="card-vendor">Nike</p>
+        <p class="card-title">Air Max 270 React</p>
+        <div class="stock-bar"><div class="stock-fill" style="width:35%"></div></div>
+        <p class="stock-label">⚠️ Stock limité</p>
+        <div class="card-prices">
+          <span class="price-sale">89,99 €</span>
+          <span class="price-compare">129,99 €</span>
         </div>
-        <div class="trust-badge">
-          <div class="trust-icon">📦</div>
-          <div>
-            <strong>Livraison Express</strong>
-            <p>Expédition sous 24h ouvrées, livraison en 2 à 5 jours partout en France.</p>
-          </div>
-        </div>
-        <div class="trust-badge">
-          <div class="trust-icon">✅</div>
-          <div>
-            <strong>100% Authentique</strong>
-            <p>Chaque paire est vérifiée et garantie authentique. Zéro compromis.</p>
-          </div>
-        </div>
-        <div class="trust-badge">
-          <div class="trust-icon">↩️</div>
-          <div>
-            <strong>Retours Faciles</strong>
-            <p>30 jours pour changer d'avis. Retours simplifiés et remboursement rapide.</p>
-          </div>
-        </div>
+        <button class="btn-atc" onclick="addToCart(event,1,'Nike Air Max 270 React',89.99,'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80')">Ajouter au panier</button>
       </div>
-    </div>
-  </section>
+    </a>
 
-  <!-- ========== NOUVEAUTES ========== -->
-  <section class="products-section" id="nouveautes">
-    <div class="section-header">
-      <span class="section-tag">Just Dropped</span>
-      <h2>Nouveautés</h2>
-      <p>Les dernières paires ajoutées à notre catalogue</p>
-    </div>
-    <div class="products-grid">
-
-      <div class="product-card">
-        <div class="product-img-wrap">
-          <span class="badge-new">Nouveau</span>
-          <span class="badge-discount">-21%</span>
-          <img src="https://images.unsplash.com/photo-1584735175315-9d5df23be2e0?w=600&q=80" alt="Nike Air Force 1" loading="lazy" />
-          <div class="product-overlay">
-            <a href="STRIPE_LINK_PRODUIT_5" class="btn btn-dark" target="_blank" rel="noopener">Acheter maintenant</a>
-          </div>
-        </div>
-        <div class="product-info">
-          <span class="product-brand">Nike</span>
-          <h3>Air Force 1 '07</h3>
-          <div class="product-stars">★★★★★ <span>(441)</span></div>
-          <div class="product-prices">
-            <span class="price-old">119,99 €</span>
-            <span class="price-new">94,99 €</span>
-          </div>
-          <a href="STRIPE_LINK_PRODUIT_5" class="btn btn-red btn-full" target="_blank" rel="noopener">Acheter</a>
-        </div>
+    <a href="product.html?id=2" class="product-card">
+      <div class="card-img">
+        <span class="badge-sale">-21%</span>
+        <img src="https://images.unsplash.com/photo-1556906781-9a412961a28c?w=500&q=80" alt="Jordan 1 Retro"/>
       </div>
-
-      <div class="product-card">
-        <div class="product-img-wrap">
-          <span class="badge-new">Nouveau</span>
-          <span class="badge-discount">-28%</span>
-          <img src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=600&q=80" alt="Yeezy Boost 350" loading="lazy" />
-          <div class="product-overlay">
-            <a href="STRIPE_LINK_PRODUIT_6" class="btn btn-dark" target="_blank" rel="noopener">Acheter maintenant</a>
-          </div>
+      <div class="card-body">
+        <p class="card-vendor">Jordan</p>
+        <p class="card-title">Jordan 1 Retro High OG</p>
+        <div class="stock-bar"><div class="stock-fill" style="width:20%"></div></div>
+        <p class="stock-label">🔴 Presque épuisé</p>
+        <div class="card-prices">
+          <span class="price-sale">149,99 €</span>
+          <span class="price-compare">189,99 €</span>
         </div>
-        <div class="product-info">
-          <span class="product-brand">Adidas</span>
-          <h3>Yeezy Boost 350 V2</h3>
-          <div class="product-stars">★★★★★ <span>(189)</span></div>
-          <div class="product-prices">
-            <span class="price-old">249,99 €</span>
-            <span class="price-new">179,99 €</span>
-          </div>
-          <a href="STRIPE_LINK_PRODUIT_6" class="btn btn-red btn-full" target="_blank" rel="noopener">Acheter</a>
-        </div>
+        <button class="btn-atc" onclick="addToCart(event,2,'Jordan 1 Retro High OG',149.99,'https://images.unsplash.com/photo-1556906781-9a412961a28c?w=500&q=80')">Ajouter au panier</button>
       </div>
+    </a>
 
-      <div class="product-card">
-        <div class="product-img-wrap">
-          <span class="badge-new">Nouveau</span>
-          <span class="badge-discount">-23%</span>
-          <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80" alt="New Balance 550" loading="lazy" />
-          <div class="product-overlay">
-            <a href="STRIPE_LINK_PRODUIT_7" class="btn btn-dark" target="_blank" rel="noopener">Acheter maintenant</a>
-          </div>
-        </div>
-        <div class="product-info">
-          <span class="product-brand">New Balance</span>
-          <h3>New Balance 550</h3>
-          <div class="product-stars">★★★★☆ <span>(93)</span></div>
-          <div class="product-prices">
-            <span class="price-old">109,99 €</span>
-            <span class="price-new">84,99 €</span>
-          </div>
-          <a href="STRIPE_LINK_PRODUIT_7" class="btn btn-red btn-full" target="_blank" rel="noopener">Acheter</a>
-        </div>
+    <a href="product.html?id=3" class="product-card">
+      <div class="card-img">
+        <span class="badge-sale">-37%</span>
+        <img src="https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=500&q=80" alt="Adidas Ultraboost"/>
       </div>
-
-      <div class="product-card">
-        <div class="product-img-wrap">
-          <span class="badge-new">Nouveau</span>
-          <span class="badge-discount">-25%</span>
-          <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?w=600&q=80" alt="Asics Gel-Lyte III" loading="lazy" />
-          <div class="product-overlay">
-            <a href="STRIPE_LINK_PRODUIT_8" class="btn btn-dark" target="_blank" rel="noopener">Acheter maintenant</a>
-          </div>
+      <div class="card-body">
+        <p class="card-vendor">Adidas</p>
+        <p class="card-title">Ultraboost 22</p>
+        <div class="stock-bar"><div class="stock-fill" style="width:60%"></div></div>
+        <p class="stock-label">🟢 En stock</p>
+        <div class="card-prices">
+          <span class="price-sale">99,99 €</span>
+          <span class="price-compare">159,99 €</span>
         </div>
-        <div class="product-info">
-          <span class="product-brand">Asics</span>
-          <h3>Gel-Lyte III OG</h3>
-          <div class="product-stars">★★★★★ <span>(67)</span></div>
-          <div class="product-prices">
-            <span class="price-old">99,99 €</span>
-            <span class="price-new">74,99 €</span>
-          </div>
-          <a href="STRIPE_LINK_PRODUIT_8" class="btn btn-red btn-full" target="_blank" rel="noopener">Acheter</a>
-        </div>
+        <button class="btn-atc" onclick="addToCart(event,3,'Adidas Ultraboost 22',99.99,'https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=500&q=80')">Ajouter au panier</button>
       </div>
+    </a>
 
-    </div>
-  </section>
-
-  <!-- ========== AVIS CLIENTS ========== -->
-  <section class="reviews-section">
-    <div class="section-header">
-      <span class="section-tag">Témoignages</span>
-      <h2>Ce que disent nos clients</h2>
-      <p>Plus de 3 000 sneakerheads nous font confiance</p>
-    </div>
-    <div class="reviews-carousel" id="reviewsCarousel">
-      <div class="reviews-track" id="reviewsTrack">
-
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">"Livraison ultra rapide, les Jordan 1 sont arrivées en 2 jours. Authentiques, emballage parfait. Je recommande à 100% !"</p>
-          <div class="review-author">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Thomas M." loading="lazy" />
-            <div>
-              <strong>Thomas M.</strong>
-              <span>Il y a 3 jours</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">"Taille parfaite grâce au guide des tailles. Les Yeezy sont incroyables, exactement comme sur les photos. Très bonne expérience !"</p>
-          <div class="review-author">
-            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah K." loading="lazy" />
-            <div>
-              <strong>Sarah K.</strong>
-              <span>Il y a 1 semaine</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">"Service client réactif, paire reçue conforme. Le paiement Stripe rassure. Mon troisième achat ici et toujours aussi satisfait !"</p>
-          <div class="review-author">
-            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Karim B." loading="lazy" />
-            <div>
-              <strong>Karim B.</strong>
-              <span>Il y a 2 semaines</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">"Les Nike Air Force 1 sont superbes ! Packaging soigné, suivi de commande simple. Je reviendrai c'est sûr !"</p>
-          <div class="review-author">
-            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Léa P." loading="lazy" />
-            <div>
-              <strong>Léa P.</strong>
-              <span>Il y a 3 semaines</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">"Super site, belle sélection. Les Dunk Low sont arrivées bien protégées dans leur carton d'origine. Très sérieux !"</p>
-          <div class="review-author">
-            <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Antoine L." loading="lazy" />
-            <div>
-              <strong>Antoine L.</strong>
-              <span>Il y a 1 mois</span>
-            </div>
-          </div>
-        </div>
-
+    <a href="product.html?id=4" class="product-card">
+      <div class="card-img">
+        <span class="badge-sale">-27%</span>
+        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=500&q=80" alt="Nike Dunk Low"/>
       </div>
-      <div class="carousel-controls">
-        <button class="carousel-btn" id="prevReview" aria-label="Précédent">&#8592;</button>
-        <div class="carousel-dots" id="carouselDots"></div>
-        <button class="carousel-btn" id="nextReview" aria-label="Suivant">&#8594;</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== FAQ ========== -->
-  <section class="faq-section">
-    <div class="section-header">
-      <span class="section-tag">FAQ</span>
-      <h2>Questions fréquentes</h2>
-    </div>
-    <div class="faq-list">
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <span>Le paiement est-il sécurisé ?</span>
-          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-answer">
-          <p>Oui, tous les paiements sont traités par <strong>Stripe</strong>, la solution de paiement la plus sécurisée au monde. Vos données bancaires ne sont jamais stockées sur nos serveurs. Nous acceptons les cartes Visa, Mastercard, American Express ainsi qu'Apple Pay et Google Pay.</p>
+      <div class="card-body">
+        <p class="card-vendor">Nike</p>
+        <p class="card-title">Dunk Low Retro</p>
+        <div class="stock-bar"><div class="stock-fill" style="width:15%"></div></div>
+        <p class="stock-label">🔴 Presque épuisé</p>
+        <div class="card-prices">
+          <span class="price-sale">79,99 €</span>
+          <span class="price-compare">109,99 €</span>
         </div>
+        <button class="btn-atc" onclick="addToCart(event,4,'Nike Dunk Low Retro',79.99,'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=500&q=80')">Ajouter au panier</button>
       </div>
+    </a>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <span>Quel est le délai de livraison ?</span>
-          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-answer">
-          <p>Les commandes sont expédiées sous <strong>24 heures ouvrées</strong>. Le délai de livraison est de <strong>2 à 5 jours ouvrés</strong> en France métropolitaine. Vous recevez un email avec votre numéro de suivi dès l'expédition. La livraison est offerte à partir de 80€ d'achat.</p>
+  </div>
+</section>
+
+<!-- BANNIERE PROMO -->
+<div class="promo-banner">
+  <p>🚚 Livraison OFFERTE dès 80€ · 📦 Expédition sous 24h · 🔒 Paiement sécurisé</p>
+</div>
+
+<!-- CATEGORIES -->
+<section class="categories-section">
+  <div class="section-title">
+    <h2>Nos Catégories</h2>
+  </div>
+  <div class="categories-grid">
+    <a href="#" class="cat-card">
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80" alt="Nike"/>
+      <div class="cat-label">Nike</div>
+    </a>
+    <a href="#" class="cat-card">
+      <img src="https://images.unsplash.com/photo-1556906781-9a412961a28c?w=600&q=80" alt="Jordan"/>
+      <div class="cat-label">Jordan</div>
+    </a>
+    <a href="#" class="cat-card">
+      <img src="https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=600&q=80" alt="Adidas"/>
+      <div class="cat-label">Adidas</div>
+    </a>
+    <a href="#" class="cat-card">
+      <img src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=600&q=80" alt="Yeezy"/>
+      <div class="cat-label">Yeezy</div>
+    </a>
+  </div>
+</section>
+
+<!-- NOUVEAUTES -->
+<section class="products-section" id="nouveautes">
+  <div class="section-title">
+    <h2>Nouveautés</h2>
+    <a href="#" class="see-all">Voir tout →</a>
+  </div>
+  <div class="products-grid">
+
+    <a href="product.html?id=5" class="product-card">
+      <div class="card-img">
+        <span class="badge-new">NEW</span>
+        <span class="badge-sale">-21%</span>
+        <img src="https://images.unsplash.com/photo-1584735175315-9d5df23be2e0?w=500&q=80" alt="Air Force 1"/>
+      </div>
+      <div class="card-body">
+        <p class="card-vendor">Nike</p>
+        <p class="card-title">Air Force 1 '07</p>
+        <div class="stock-bar"><div class="stock-fill" style="width:70%"></div></div>
+        <p class="stock-label">🟢 En stock</p>
+        <div class="card-prices">
+          <span class="price-sale">94,99 €</span>
+          <span class="price-compare">119,99 €</span>
         </div>
+        <button class="btn-atc" onclick="addToCart(event,5,'Nike Air Force 1 07',94.99,'https://images.unsplash.com/photo-1584735175315-9d5df23be2e0?w=500&q=80')">Ajouter au panier</button>
       </div>
+    </a>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <span>Comment choisir ma taille ?</span>
-          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-answer">
-          <p>Nos sneakers sont disponibles en tailles EU standard. En général, nous recommandons de prendre votre taille habituelle. Cependant :</p>
-          <ul>
-            <li><strong>Nike :</strong> Prenez votre taille habituelle ou 0,5 de plus si vous avez le pied large.</li>
-            <li><strong>Jordan :</strong> Prenez votre taille habituelle. Les Jordan 1 taillent légèrement grand.</li>
-            <li><strong>Adidas / Yeezy :</strong> Prenez 0,5 de plus que votre taille habituelle.</li>
-            <li><strong>New Balance :</strong> Taille standard, prenez votre taille habituelle.</li>
-          </ul>
-          <p>En cas de doute, notre support est disponible à <a href="mailto:support@kickz.fr">support@kickz.fr</a>.</p>
+    <a href="product.html?id=6" class="product-card">
+      <div class="card-img">
+        <span class="badge-new">NEW</span>
+        <span class="badge-sale">-28%</span>
+        <img src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=500&q=80" alt="Yeezy 350"/>
+      </div>
+      <div class="card-body">
+        <p class="card-vendor">Adidas</p>
+        <p class="card-title">Yeezy Boost 350 V2</p>
+        <div class="stock-bar"><div class="stock-fill" style="width:25%"></div></div>
+        <p class="stock-label">⚠️ Stock limité</p>
+        <div class="card-prices">
+          <span class="price-sale">179,99 €</span>
+          <span class="price-compare">249,99 €</span>
         </div>
+        <button class="btn-atc" onclick="addToCart(event,6,'Yeezy Boost 350 V2',179.99,'https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=500&q=80')">Ajouter au panier</button>
       </div>
+    </a>
 
-    </div>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="index.html" class="footer-logo">KICKZ</a>
-        <p>La référence des sneakers premium en France. Authenticité garantie, livraison express.</p>
-        <div class="social-links">
-          <a href="#" aria-label="Instagram">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-          </a>
-          <a href="#" aria-label="TikTok">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.77 1.52V6.76a4.85 4.85 0 01-1-.07z"/></svg>
-          </a>
-          <a href="#" aria-label="Twitter/X">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
+    <a href="product.html?id=7" class="product-card">
+      <div class="card-img">
+        <span class="badge-new">NEW</span>
+        <span class="badge-sale">-23%</span>
+        <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=500&q=80" alt="New Balance 550"/>
+      </div>
+      <div class="card-body">
+        <p class="card-vendor">New Balance</p>
+        <p class="card-title">New Balance 550</p>
+        <div class="stock-bar"><div class="stock-fill" style="width:50%"></div></div>
+        <p class="stock-label">🟢 En stock</p>
+        <div class="card-prices">
+          <span class="price-sale">84,99 €</span>
+          <span class="price-compare">109,99 €</span>
         </div>
+        <button class="btn-atc" onclick="addToCart(event,7,'New Balance 550',84.99,'https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=500&q=80')">Ajouter au panier</button>
       </div>
-      <div class="footer-links">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="#produits">Nos Produits</a></li>
-          <li><a href="#nouveautes">Nouveautés</a></li>
-          <li><a href="track.html">Suivre ma commande</a></li>
-        </ul>
+    </a>
+
+    <a href="product.html?id=8" class="product-card">
+      <div class="card-img">
+        <span class="badge-new">NEW</span>
+        <span class="badge-sale">-25%</span>
+        <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?w=500&q=80" alt="Asics Gel"/>
       </div>
-      <div class="footer-links">
-        <h4>Informations</h4>
-        <ul>
-          <li><a href="#">Mentions légales</a></li>
-          <li><a href="#">Politique de confidentialité</a></li>
-          <li><a href="#">CGV</a></li>
-          <li><a href="#">Politique de retours</a></li>
-        </ul>
+      <div class="card-body">
+        <p class="card-vendor">Asics</p>
+        <p class="card-title">Gel-Lyte III OG</p>
+        <div class="stock-bar"><div class="stock-fill" style="width:45%"></div></div>
+        <p class="stock-label">🟢 En stock</p>
+        <div class="card-prices">
+          <span class="price-sale">74,99 €</span>
+          <span class="price-compare">99,99 €</span>
+        </div>
+        <button class="btn-atc" onclick="addToCart(event,8,'Asics Gel-Lyte III OG',74.99,'https://images.unsplash.com/photo-1539185441755-769473a23570?w=500&q=80')">Ajouter au panier</button>
       </div>
-      <div class="footer-newsletter">
-        <h4>Newsletter</h4>
-        <p>Recevez nos offres exclusives et nouveautés en avant-première.</p>
-        <form class="newsletter-form" id="newsletterForm">
-          <input type="email" placeholder="Votre adresse email" required />
-          <button type="submit" class="btn btn-red">S'abonner</button>
-        </form>
-        <p class="footer-contact">📧 <a href="mailto:support@kickz.fr">support@kickz.fr</a></p>
+    </a>
+
+  </div>
+</section>
+
+<!-- AVIS -->
+<section class="reviews-section">
+  <div class="section-title"><h2>Ils nous font confiance</h2></div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>"Livraison ultra rapide, les Jordan 1 sont arrivées en 2 jours. Authenticité vérifiée. Je recommande !"</p>
+      <div class="reviewer">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Thomas"/>
+        <span>Thomas M. · il y a 3 jours</span>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div class="payment-logos">
-        <span>Paiements acceptés :</span>
-        <div class="payment-icons">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/200px-Visa_Inc._logo.svg.png" alt="Visa" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/200px-Mastercard-logo.svg.png" alt="Mastercard" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/200px-PayPal.svg.png" alt="PayPal" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/100px-Apple_logo_black.svg.png" alt="Apple Pay" class="apple-pay" />
-        </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>"Taille parfaite grâce au guide. Les Yeezy sont incroyables, exactement comme sur les photos !"</p>
+      <div class="reviewer">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah"/>
+        <span>Sarah K. · il y a 1 semaine</span>
       </div>
-      <p class="footer-copy">© 2025 KICKZ. Tous droits réservés.</p>
     </div>
-  </footer>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>"Mon 3ème achat ici. Service client réactif, paire conforme. Le paiement Stripe rassure vraiment."</p>
+      <div class="reviewer">
+        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Karim"/>
+        <span>Karim B. · il y a 2 semaines</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- ========== CART TOAST ========== -->
-  <div class="toast" id="toast"></div>
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="section-title"><h2>Questions fréquentes</h2></div>
+  <div class="faq">
 
-  <script src="script.js"></script>
+    <div class="faq-item">
+      <button class="faq-q">Le paiement est-il sécurisé ? <span>+</span></button>
+      <div class="faq-a">
+        <p>Oui. Tous les paiements sont traités par <strong>Stripe</strong> — la solution la plus sécurisée du marché. Vos données bancaires ne transitent jamais sur nos serveurs. Visa, Mastercard, Apple Pay et Google Pay acceptés.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Quel est le délai de livraison ? <span>+</span></button>
+      <div class="faq-a">
+        <p>Expédition sous <strong>24h ouvrées</strong>. Livraison en <strong>2 à 5 jours</strong> en France. Un email de suivi vous est envoyé dès l'expédition. Livraison offerte dès 80€.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Comment choisir ma taille ? <span>+</span></button>
+      <div class="faq-a">
+        <p><strong>Nike :</strong> votre taille habituelle.<br/>
+        <strong>Jordan :</strong> votre taille habituelle (Jordan 1 taille légèrement grand).<br/>
+        <strong>Adidas / Yeezy :</strong> prenez 0.5 de plus.<br/>
+        <strong>New Balance :</strong> votre taille habituelle.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <p class="footer-logo">SNEAKERS<span>WORLD</span></p>
+      <p class="footer-desc">La référence sneakers premium en France. Authenticité garantie, livraison express.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">📷 snkrs_world69</a>
+        <a href="#" aria-label="Snapchat">👻 snkrs_world</a>
+      </div>
+    </div>
+    <div>
+      <p class="footer-heading">Liens</p>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="track.html">Suivre ma commande</a></li>
+        <li><a href="#">CGV</a></li>
+        <li><a href="#">Politique de confidentialité</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading">Contact</p>
+      <ul>
+        <li><a href="mailto:contact@sneakersworld.fr">contact@sneakersworld.fr</a></li>
+        <li><a href="#">📷 snkrs_world69</a></li>
+        <li><a href="#">👻 snkrs_world</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading">Newsletter</p>
+      <p style="color:rgba(255,255,255,.5);font-size:.85rem;margin-bottom:12px">Offres exclusives en avant-première.</p>
+      <form class="footer-form" onsubmit="return false">
+        <input type="email" placeholder="Votre email"/>
+        <button type="submit">S'abonner</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="payment-logos">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/200px-Visa_Inc._logo.svg.png" alt="Visa"/>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/200px-Mastercard-logo.svg.png" alt="Mastercard"/>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/200px-PayPal.svg.png" alt="PayPal"/>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/100px-Apple_logo_black.svg.png" alt="Apple Pay" class="apple"/>
+    </div>
+    <p>© 2025 Sneakers World. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<!-- CART TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
 </body>
 </html>

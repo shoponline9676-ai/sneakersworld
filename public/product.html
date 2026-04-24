@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Produit — Sneakers World</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker-bar">
+  <div class="ticker-inner">
+    <div class="ticker-track">
+      <span>🔥 Livraison offerte dès 80€</span>
+      <span>⚡ Stock limité — commandez vite</span>
+      <span>✅ Paiement 100% sécurisé</span>
+      <span>📦 Expédition sous 24h</span>
+      <span>🎁 Code promo : <strong>WORLD10</strong> — 10% de réduction</span>
+      <span>🔥 Livraison offerte dès 80€</span>
+      <span>⚡ Stock limité — commandez vite</span>
+      <span>✅ Paiement 100% sécurisé</span>
+      <span>📦 Expédition sous 24h</span>
+      <span>🎁 Code promo : <strong>WORLD10</strong> — 10% de réduction</span>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <a href="index.html" class="logo">SNEAKERS<span>WORLD</span></a>
+    <nav class="main-nav">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#meilleures-ventes">Meilleures ventes</a>
+      <a href="index.html#nouveautes">Nouveautés</a>
+      <a href="track.html">Suivre ma commande</a>
+    </nav>
+    <div class="header-actions">
+      <a href="cart.html" class="icon-btn cart-icon" aria-label="Panier">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <button class="drawer-close" id="drawerClose">✕</button>
+  <a href="index.html">Accueil</a>
+  <a href="index.html#meilleures-ventes">Meilleures ventes</a>
+  <a href="cart.html">Mon Panier</a>
+  <a href="track.html">Suivre ma commande</a>
+</div>
+<div class="drawer-overlay" id="drawerOverlay"></div>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="index.html">Accueil</a> <span>/</span> <span id="breadProduct">Produit</span>
+</div>
+
+<!-- PRODUCT PAGE -->
+<section class="product-page" id="productPage">
+  <div class="product-gallery">
+    <div class="main-img-wrap">
+      <span class="badge-sale" id="pdBadge">-31%</span>
+      <img id="mainImg" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700&q=85" alt="Produit"/>
+    </div>
+    <div class="thumbnails" id="thumbnails">
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&q=80" alt="Vue 1" class="thumb active" onclick="setImg(this)"/>
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&q=80&sat=-100" alt="Vue 2" class="thumb" onclick="setImg(this)"/>
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&q=80&flip=h" alt="Vue 3" class="thumb" onclick="setImg(this)"/>
+    </div>
+  </div>
+
+  <div class="product-details">
+    <p class="pd-vendor" id="pdVendor">Nike</p>
+    <h1 class="pd-title" id="pdTitle">Air Max 270 React</h1>
+
+    <div class="pd-stars">★★★★★ <span>(87 avis)</span></div>
+
+    <div class="pd-prices">
+      <span class="price-sale" id="pdSale">89,99 €</span>
+      <span class="price-compare" id="pdCompare">129,99 €</span>
+      <span class="pd-badge-save" id="pdSave">Économisez 40 €</span>
+    </div>
+
+    <div class="stock-bar" style="margin:16px 0 6px">
+      <div class="stock-fill" style="width:35%"></div>
+    </div>
+    <p class="stock-label">⚠️ Stock limité — dépêchez-vous !</p>
+
+    <!-- Tailles -->
+    <div class="pd-sizes">
+      <p class="pd-label">Pointure <a href="#" class="size-guide">Guide des tailles →</a></p>
+      <div class="size-grid" id="sizeGrid">
+        <button class="size-btn" onclick="selectSize(this)">38</button>
+        <button class="size-btn" onclick="selectSize(this)">39</button>
+        <button class="size-btn" onclick="selectSize(this)">40</button>
+        <button class="size-btn" onclick="selectSize(this)">41</button>
+        <button class="size-btn" onclick="selectSize(this)">42</button>
+        <button class="size-btn" onclick="selectSize(this)">43</button>
+        <button class="size-btn sold-out" disabled>44</button>
+        <button class="size-btn" onclick="selectSize(this)">45</button>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="pd-cta">
+      <button class="btn-atc btn-atc-lg" id="pdAtcBtn" onclick="pdAddToCart()">Ajouter au panier</button>
+      <a href="#" class="btn-buy" id="pdBuyBtn" target="_blank" rel="noopener">Acheter maintenant →</a>
+    </div>
+
+    <div class="pd-trust">
+      <span>🔒 Paiement sécurisé</span>
+      <span>📦 Expédition sous 24h</span>
+      <span>✅ Authenticité garantie</span>
+      <span>↩️ Retour 30 jours</span>
+    </div>
+
+    <!-- Description -->
+    <div class="pd-desc">
+      <h3>Description</h3>
+      <p id="pdDesc">La Nike Air Max 270 React combine le talon Air 270 le plus grand jamais conçu avec une semelle intermédiaire React ultra-légère pour un confort exceptionnel toute la journée. Design épuré, look lifestyle premium.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUITS SIMILAIRES -->
+<section class="products-section" style="background:#f9f9f9">
+  <div class="section-title"><h2>Vous aimerez aussi</h2></div>
+  <div class="products-grid">
+    <a href="product.html?id=2" class="product-card">
+      <div class="card-img"><span class="badge-sale">-21%</span><img src="https://images.unsplash.com/photo-1556906781-9a412961a28c?w=500&q=80" alt="Jordan 1"/></div>
+      <div class="card-body">
+        <p class="card-vendor">Jordan</p><p class="card-title">Jordan 1 Retro High OG</p>
+        <div class="card-prices"><span class="price-sale">149,99 €</span><span class="price-compare">189,99 €</span></div>
+        <button class="btn-atc" onclick="addToCart(event,2,'Jordan 1 Retro High OG',149.99,'https://images.unsplash.com/photo-1556906781-9a412961a28c?w=500&q=80')">Ajouter au panier</button>
+      </div>
+    </a>
+    <a href="product.html?id=4" class="product-card">
+      <div class="card-img"><span class="badge-sale">-27%</span><img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=500&q=80" alt="Dunk Low"/></div>
+      <div class="card-body">
+        <p class="card-vendor">Nike</p><p class="card-title">Dunk Low Retro</p>
+        <div class="card-prices"><span class="price-sale">79,99 €</span><span class="price-compare">109,99 €</span></div>
+        <button class="btn-atc" onclick="addToCart(event,4,'Nike Dunk Low Retro',79.99,'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=500&q=80')">Ajouter au panier</button>
+      </div>
+    </a>
+    <a href="product.html?id=5" class="product-card">
+      <div class="card-img"><span class="badge-sale">-21%</span><img src="https://images.unsplash.com/photo-1584735175315-9d5df23be2e0?w=500&q=80" alt="Air Force 1"/></div>
+      <div class="card-body">
+        <p class="card-vendor">Nike</p><p class="card-title">Air Force 1 '07</p>
+        <div class="card-prices"><span class="price-sale">94,99 €</span><span class="price-compare">119,99 €</span></div>
+        <button class="btn-atc" onclick="addToCart(event,5,'Nike Air Force 1',94.99,'https://images.unsplash.com/photo-1584735175315-9d5df23be2e0?w=500&q=80')">Ajouter au panier</button>
+      </div>
+    </a>
+    <a href="product.html?id=6" class="product-card">
+      <div class="card-img"><span class="badge-sale">-28%</span><img src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=500&q=80" alt="Yeezy"/></div>
+      <div class="card-body">
+        <p class="card-vendor">Adidas</p><p class="card-title">Yeezy Boost 350 V2</p>
+        <div class="card-prices"><span class="price-sale">179,99 €</span><span class="price-compare">249,99 €</span></div>
+        <button class="btn-atc" onclick="addToCart(event,6,'Yeezy Boost 350 V2',179.99,'https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=500&q=80')">Ajouter au panier</button>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <p class="footer-logo">SNEAKERS<span>WORLD</span></p>
+      <p class="footer-desc">Authenticité garantie, livraison express.</p>
+    </div>
+    <div>
+      <p class="footer-heading">Liens</p>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="track.html">Suivi commande</a></li>
+        <li><a href="#">CGV</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading">Contact</p>
+      <ul>
+        <li><a href="mailto:contact@sneakersworld.fr">contact@sneakersworld.fr</a></li>
+      </ul>
+    </div>
+    <div></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="payment-logos">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/200px-Visa_Inc._logo.svg.png" alt="Visa"/>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/200px-Mastercard-logo.svg.png" alt="Mastercard"/>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/200px-PayPal.svg.png" alt="PayPal"/>
+    </div>
+    <p>© 2025 Sneakers World. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+<script>
+// Product data
+const products = {
+  1: { vendor:'Nike', title:'Air Max 270 React', sale:'89,99 €', compare:'129,99 €', save:'40 €', discount:'-31%', img:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700&q=85', stripe:'STRIPE_LINK_PRODUIT_1', desc:'La Nike Air Max 270 React combine le talon Air 270 le plus grand jamais conçu avec une semelle intermédiaire React ultra-légère pour un confort exceptionnel toute la journée.' },
+  2: { vendor:'Jordan', title:'Jordan 1 Retro High OG', sale:'149,99 €', compare:'189,99 €', save:'40 €', discount:'-21%', img:'https://images.unsplash.com/photo-1556906781-9a412961a28c?w=700&q=85', stripe:'STRIPE_LINK_PRODUIT_2', desc:'Icône intemporelle du basketball, la Jordan 1 Retro High OG est la sneaker la plus iconique de l\'histoire. Cuir premium, coloris authentique.' },
+  3: { vendor:'Adidas', title:'Ultraboost 22', sale:'99,99 €', compare:'159,99 €', save:'60 €', discount:'-37%', img:'https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=700&q=85', stripe:'STRIPE_LINK_PRODUIT_3', desc:'L\'Adidas Ultraboost 22 offre un retour d\'énergie exceptionnel grâce à sa semelle Boost. Idéale pour la course et le lifestyle urbain.' },
+  4: { vendor:'Nike', title:'Dunk Low Retro', sale:'79,99 €', compare:'109,99 €', save:'30 €', discount:'-27%', img:'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=700&q=85', stripe:'STRIPE_LINK_PRODUIT_4', desc:'La Nike Dunk Low Retro revient dans ses coloris d\'origine. Une silhouette légendaire devenue incontournable dans la culture sneaker.' },
+  5: { vendor:'Nike', title:"Air Force 1 '07", sale:'94,99 €', compare:'119,99 €', save:'25 €', discount:'-21%', img:'https://images.unsplash.com/photo-1584735175315-9d5df23be2e0?w=700&q=85', stripe:'STRIPE_LINK_PRODUIT_5', desc:"L'Air Force 1 est une légende. Depuis 1982, cette silhouette au design épuré reste la sneaker la plus vendue de Nike." },
+  6: { vendor:'Adidas', title:'Yeezy Boost 350 V2', sale:'179,99 €', compare:'249,99 €', save:'70 €', discount:'-28%', img:'https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=700&q=85', stripe:'STRIPE_LINK_PRODUIT_6', desc:'Créée en collaboration avec Kanye West, la Yeezy Boost 350 V2 est l\'une des sneakers les plus désirées au monde.' },
+  7: { vendor:'New Balance', title:'New Balance 550', sale:'84,99 €', compare:'109,99 €', save:'25 €', discount:'-23%', img:'https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=700&q=85', stripe:'STRIPE_LINK_PRODUIT_7', desc:'Rééditée en 2020, la New Balance 550 est devenue l\'une des silhouettes les plus tendance. Style court minimaliste, confort maximal.' },
+  8: { vendor:'Asics', title:'Gel-Lyte III OG', sale:'74,99 €', compare:'99,99 €', save:'25 €', discount:'-25%', img:'https://images.unsplash.com/photo-1539185441755-769473a23570?w=700&q=85', stripe:'STRIPE_LINK_PRODUIT_8', desc:'La Asics Gel-Lyte III OG est une référence du running lifestyle des années 90. Technologie Gel visible, coloris originaux.' },
+};
+
+const params = new URLSearchParams(window.location.search);
+const id = parseInt(params.get('id')) || 1;
+const p = products[id] || products[1];
+
+document.getElementById('pdVendor').textContent = p.vendor;
+document.getElementById('pdTitle').textContent = p.title;
+document.getElementById('pdSale').textContent = p.sale;
+document.getElementById('pdCompare').textContent = p.compare;
+document.getElementById('pdSave').textContent = 'Économisez ' + p.save;
+document.getElementById('pdBadge').textContent = p.discount;
+document.getElementById('pdDesc').textContent = p.desc;
+document.getElementById('mainImg').src = p.img;
+document.getElementById('mainImg').alt = p.title;
+document.getElementById('breadProduct').textContent = p.title;
+document.title = p.title + ' — Sneakers World';
+
+// Stripe buy now
+const buyBtn = document.getElementById('pdBuyBtn');
+if (p.stripe.startsWith('STRIPE_LINK')) {
+  buyBtn.href = '#';
+  buyBtn.addEventListener('click', e => { e.preventDefault(); showToast('⚠️ Lien Stripe non configuré.'); });
+} else {
+  buyBtn.href = p.stripe;
+}
+
+function selectSize(btn) {
+  document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+}
+
+function pdAddToCart() {
+  const size = document.querySelector('.size-btn.selected');
+  if (!size) { showToast('⚠️ Veuillez choisir une pointure.'); return; }
+  addToCart(null, id, p.title, parseFloat(p.sale.replace(',','.')), p.img);
+}
+
+function setImg(thumb) {
+  document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+  thumb.classList.add('active');
+  document.getElementById('mainImg').src = thumb.src.replace('w=200','w=700');
+}
+</script>
+</body>
+</html>
