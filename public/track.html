@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suivre ma commande — KICKZ</title>
+  <meta name="description" content="Suivez votre commande KICKZ en temps réel grâce à votre numéro de suivi." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========== TICKER ========== -->
+  <div class="ticker-bar">
+    <div class="ticker-track">
+      <span>🎉 CODE PROMO : <strong>KICKZ10</strong> — 10% sur votre commande</span>
+      <span>🚚 LIVRAISON OFFERTE dès 80€ d'achat</span>
+      <span>🔒 Paiement 100% sécurisé via Stripe</span>
+      <span>📦 Expédition sous 24h</span>
+      <span>⭐ Plus de 3 000 clients satisfaits</span>
+      <span>🎉 CODE PROMO : <strong>KICKZ10</strong> — 10% sur votre commande</span>
+      <span>🚚 LIVRAISON OFFERTE dès 80€ d'achat</span>
+      <span>🔒 Paiement 100% sécurisé via Stripe</span>
+      <span>📦 Expédition sous 24h</span>
+      <span>⭐ Plus de 3 000 clients satisfaits</span>
+    </div>
+  </div>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">KICKZ</a>
+      <nav class="nav-menu">
+        <a href="index.html">Accueil</a>
+        <a href="index.html#produits">Nos Produits</a>
+        <a href="track.html" style="color: var(--red)">Suivre ma commande</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="cart-btn" id="cartBtn" aria-label="Panier">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#produits">Nos Produits</a>
+      <a href="track.html">Suivre ma commande</a>
+    </div>
+  </header>
+
+  <!-- ========== TRACKING PAGE ========== -->
+  <main class="track-page">
+    <div class="track-card">
+      <div class="track-icon">📦</div>
+      <h1>Suivre ma commande</h1>
+      <p>Entrez votre numéro de suivi ci-dessous pour suivre votre colis en temps réel via 17TRACK.</p>
+
+      <div class="track-form">
+        <input
+          type="text"
+          id="trackingInput"
+          class="track-input"
+          placeholder="Ex : XY123456789FR"
+          autocomplete="off"
+          spellcheck="false"
+          maxlength="60"
+        />
+        <button class="btn btn-red" onclick="trackOrder()">
+          Suivre ma commande →
+        </button>
+      </div>
+
+      <div class="track-info">
+        <span>📬 Votre numéro de suivi vous a été envoyé par email lors de l'expédition.</span>
+        <span>⏱️ Les mises à jour de statut peuvent prendre 24-48h après l'expédition.</span>
+        <span>💬 Un problème ? <a href="mailto:support@kickz.fr" style="color:var(--red)">Contactez-nous</a></span>
+      </div>
+    </div>
+  </main>
+
+  <!-- ========== FOOTER MINI ========== -->
+  <footer class="footer">
+    <div class="footer-bottom" style="max-width: 1280px; margin: 0 auto; border-top: none; padding: 32px 24px;">
+      <div class="payment-logos">
+        <span>Paiements acceptés :</span>
+        <div class="payment-icons">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/200px-Visa_Inc._logo.svg.png" alt="Visa" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/200px-Mastercard-logo.svg.png" alt="Mastercard" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/200px-PayPal.svg.png" alt="PayPal" />
+        </div>
+      </div>
+      <p class="footer-copy">© 2025 KICKZ. Tous droits réservés. — <a href="index.html" style="color: rgba(255,255,255,0.4)">Retour à l'accueil</a></p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
